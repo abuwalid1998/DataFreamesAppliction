@@ -15,7 +15,7 @@ public class JavaRunner {
 
         Dataset<Row> dataset = csVfileReader.createcsv(csVfileReader.createSparkContext());
 
-        Dataset<Row> df = dataset.groupBy("usercity").count();
+        Dataset<Row> df = dataset.groupBy("(Node 01) Soil EC").count();
 
 
 
@@ -24,7 +24,7 @@ public class JavaRunner {
         String generatedString = new String(array);
 
 
-        df = dataset.groupBy("usercity").count();
+        df = dataset.groupBy("(Node 01) Soil EC").count();
 
         df.show();
 
